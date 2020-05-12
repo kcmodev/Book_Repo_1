@@ -1,4 +1,4 @@
-//     Author: Steven Christensen
+//     Author: kcmodev
 //     Date of original submission: 5/12/2020
 //     IDE used: Microsoft Visual Studio
 //     Class: WGU C867 Scripting and Programming Applications
