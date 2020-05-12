@@ -29,8 +29,7 @@ int main()
 
     cout << "WGU C867 Scripting and Programming Applications" << endl;
     cout << "Programming language used: C++" << endl;
-    cout << "WGU Student ID: 1216499" << endl;
-    cout << "Student name: Steven Christensen" << endl;
+    cout << "Student name: kcmodev" << endl;
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 
     cout << "Creating an instance of the \"Roster\" class....." << endl;
