@@ -1,48 +1,90 @@
-#ifndef STUDENT_H
-#define STUDENT_H
+#pragma once
 
 #include <string>
+#include "Degree.h"
 using namespace std;
 
 class Student
 {
 public:
+    const static int numStudents = 5; // number of students in data set
+    const static int totalDays = 3; // number of days to be averaged in data set
+    int removed = 0;
+
+protected:
+    string studentID = "";
+    string firstName = "";
+    string lastName = "";
+    string emailAddress = "";
+    int age = 0;
+    int numDays[totalDays]; 
+    DegreeProgram degreeProgram;
+
+public:
+    Student(); // constructor
+    Student(string studentID, string firstName, string lastName, string emailAddress, int age, int numDays[]); // overloaded constructor
+
+    //setters
     void setStudentID(string studentID);
     void setFirstName(string firstName);
     void setLastName(string lastName);
     void setEmailAddress(string email);
     void setAge(int age);
-    void setDaysToComplete();
-    void setDegreeProgram();
-    void printAllStudentData();
-    Student();
+    void setDaysToComplete(int numDays[]);
+    void printStudentData();
 
+    //getters
     string getStudentID() const;
     string getFirstName() const;
     string getLastName() const;
     string getEmailAddress() const;
     int getAge() const;
-    int getDaysToComplete() const;
-    string getDegreeProgram();
+    void getDaysToComplete() const;
+    virtual DegreeProgram getDegreeProgram() = 0;
+    virtual void print() {};
 
-private:
-    string studentID = " ";
-    string firstName = " ";
-    string lastName = " ";
-    string emailAddress = " ";
-    int age = 0;
-    int daysToComplete[3] = {0, 0, 0};
-    string degreeProgram = " ";
+    ~Student(); // deconstructor
 };
 
-Student::Student(){
-    studentID = "empty";
-    firstName = "empty";
-    lastName = "empty";
-    emailAddress = "empty";
-    int age = -1;
-    int daysToComplete[3] = {-1, -1, -1};
-    string degreeProgram = "empty";
-}
+// security student class
+class SecurityStudent : public Student {
 
-#endif
+// calls constructors from Student class
+public:
+    SecurityStudent();
+    SecurityStudent(string studentID, string firstName, string lastName, string emailAddress,
+        int age, int numDays[], DegreeProgram degreeProgram);
+
+    DegreeProgram getDegreeProgram();
+    void print();
+
+    ~SecurityStudent();
+};
+
+// networking student class
+class NetworkStudent : public Student {
+
+public:
+    NetworkStudent();
+    NetworkStudent(string studentID, string firstName, string lastName, string emailAddress,
+        int age, int numDays[], DegreeProgram degreeProgram);
+
+    DegreeProgram getDegreeProgram();
+    void print();
+
+    ~NetworkStudent();
+};
+
+// software student class
+class SoftwareStudent : public Student {
+
+public:
+    SoftwareStudent();
+    SoftwareStudent(string studentID, string firstName, string lastName, string emailAddress,
+        int age, int numDays[], DegreeProgram degreeProgram);
+
+    DegreeProgram getDegreeProgram();
+    void print();
+
+    ~SoftwareStudent();
+};
