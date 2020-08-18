@@ -1,10 +1,16 @@
+/**
+ * Author: kcmodev
+ * Date of original submission: 5/12/2020
+ * Class: WGU C867 Scripting and Programming Applications
+ */
+
 #include <iostream>
 #include <string>
 using namespace std;
 
-#include "Roster.h"
-#include "Student.h"
-#include "Degree.h"
+#include "roster.h"
+#include "student.h"
+#include "degree.h"
 
 Roster::Roster() {
     this->index = -1;

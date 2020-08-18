@@ -1,9 +1,15 @@
+/**
+ * Author: kcmodev
+ * Date of original submission: 5/12/2020
+ * Class: WGU C867 Scripting and Programming Applications
+ */
+
 #include <iostream>
 #include <string>
 using namespace std;
 
-#include "Student.h"
-#include "Degree.h"
+#include "student.h"
+#include "degree.h"
 
 Student::Student() { // sets default values
     this->studentID = "";
@@ -78,7 +84,8 @@ void Student::getDaysToComplete() const { // prints avg numbers of days for cour
         avg += static_cast<double>(numDays[i]);
     }
 
-    avg = round(avg / this->totalDays);
+//    avg = round(avg / this->totalDays);
+    avg = avg / this->totalDays;
     cout << avg << endl;
 }
 
@@ -93,8 +100,8 @@ void Student::printStudentData() {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // SECURITY student subclass & functions
 SecurityStudent::SecurityStudent() :Student() {
-    // establishes a subclass for security students with a constructor
 
+    // establishes a subclass for security students with a constructor
     degreeProgram = DegreeProgram::SECURITY;
 }
 
@@ -139,7 +146,7 @@ NetworkStudent::NetworkStudent(string studentID, string firstName, string lastNa
     : Student(studentID, firstName, lastName, emailAddress, age, numDays) {
     // and an overloaded constructor
 
-    // instatnciates a DegreeProgram enum for this subclass
+    // instantiates a DegreeProgram enum for this subclass
     degreeProgram = DegreeProgram::NETWORK;
 }
 
@@ -174,12 +181,11 @@ SoftwareStudent::SoftwareStudent(string studentID, string firstName, string last
     : Student(studentID, firstName, lastName, emailAddress, age, numDays) {
     // and an overloaded constructor
 
-    // instatnciates a DegreeProgram enum for this subclass
+    // instantiates a DegreeProgram enum for this subclass
     degreeProgram = DegreeProgram::SOFTWARE;
 }
 
 DegreeProgram SoftwareStudent::getDegreeProgram() {
-
     // sets enum value
     return DegreeProgram::SOFTWARE;
 }
@@ -196,5 +202,4 @@ SoftwareStudent::~SoftwareStudent() {
 }
 
 Student::~Student() {
-
 }

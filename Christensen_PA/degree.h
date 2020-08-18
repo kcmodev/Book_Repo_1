@@ -1,3 +1,9 @@
+/**
+ * Author: kcmodev
+ * Date of original submission: 5/12/2020
+ * Class: WGU C867 Scripting and Programming Applications
+ */
+
 #pragma once
 
 using namespace std;

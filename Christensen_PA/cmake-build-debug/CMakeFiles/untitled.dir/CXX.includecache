@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/degree.h
+
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/main.cpp
+iostream
+-
+vector
+-
+string
+-
+cstring
+-
+degree.h
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/degree.h
+roster.h
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/roster.h
+student.h
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/student.h
+
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/roster.h
+iostream
+-
+string
+-
+degree.h
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/degree.h
+student.h
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/student.h
+
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/student.h
+string
+-
+degree.h
+/Users/fig_newton77/CLionProjects/C867_Performance_Assessment/Christensen_PA/degree.h
+

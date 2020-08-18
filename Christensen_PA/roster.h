@@ -1,3 +1,9 @@
+/**
+ * Author: kcmodev
+ * Date of original submission: 5/12/2020
+ * Class: WGU C867 Scripting and Programming Applications
+ */
+
 #pragma once
 
 #include <iostream>
@@ -5,8 +11,8 @@
 
 using namespace std;
 
-#include "Degree.h"
-#include "Student.h"
+#include "degree.h"
+#include "student.h"
 
 class Roster {
 private:
@@ -18,7 +24,7 @@ public:
     Roster();
     Roster(int numStudents);
     
-    //Student* getStudentAt(int index);
+//    Student* getStudentAt(int index);
     string getStudentAt(int index);
     void parseData(string data);
     void add(string studentID, string firstName, string lastName,

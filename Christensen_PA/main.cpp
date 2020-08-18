@@ -1,7 +1,8 @@
-//     Author: kcmodev
-//     Date of original submission: 5/12/2020
-//     IDE used: Microsoft Visual Studio
-//     Class: WGU C867 Scripting and Programming Applications
+/**
+ * Author: kcmodev
+ * Date of original submission: 5/12/2020
+ * Class: WGU C867 Scripting and Programming Applications
+ */
 
 #include <iostream>
 #include <vector>
@@ -10,9 +11,9 @@
 
 using namespace std;
 
-#include "Degree.h"
-#include "Roster.h"
-#include "Student.h"
+#include "degree.h"
+#include "roster.h"
+#include "student.h"
 
 int main()
 {

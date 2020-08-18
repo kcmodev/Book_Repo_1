@@ -1,7 +1,13 @@
+/**
+ * Author: kcmodev
+ * Date of original submission: 5/12/2020
+ * Class: WGU C867 Scripting and Programming Applications
+ */
+
 #pragma once
 
 #include <string>
-#include "Degree.h"
+#include "degree.h"
 using namespace std;
 
 class Student
